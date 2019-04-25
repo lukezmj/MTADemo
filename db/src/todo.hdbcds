@@ -1,0 +1,10 @@
+context todo {
+
+    /*@@layout{"layoutInfo":{"x":234,"y":213.5}}*/
+    entity Task {
+        key id     : String(10)  not null;
+            titile : String(100) not null;
+            note   : String(250);
+            status : Integer;
+    };
+};
