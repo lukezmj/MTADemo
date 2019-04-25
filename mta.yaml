@@ -9,6 +9,22 @@ modules:
    requires:
     - name: hdi_db
 
+
+ - name: service
+   type: java
+   path: service
+   parameters:
+      memory: 1024M
+   provides:
+    - name: service_api
+      properties:
+         url: ${default-url}
+   requires:
+    - name: hdi_db
+      properties:
+         JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
+            {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
+
 resources:
  - name: hdi_db
    properties:
