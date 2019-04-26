@@ -53,13 +53,14 @@
     Path %TOMCAT_HOME%\bin;%TOMCAT_HOME%\lib
     ---
     cmd->catalina run
+    after you see "INFO: Server startup in **** ms"
     browser: localhost:8080->Tomcat homepage
+    
+    if you see error like below:     
+    Apr 26, 2019 4:01:17 PM org.apache.catalina.core.StandardServer await
+    SEVERE: StandardServer.await: create[localhost:8005]:
+    java.net.BindException: Address already in use: JVM_Bind
 
-if you see error like below:     
-Apr 26, 2019 4:01:17 PM org.apache.catalina.core.StandardServer await
-SEVERE: StandardServer.await: create[localhost:8005]:
-java.net.BindException: Address already in use: JVM_Bind
-
-go to C:\**\apache-tomcat-7.0.94\conf\server.xml, then change 8005 port to 8035 (or any other port not in use).
+    go to C:\**\apache-tomcat-7.0.94\conf\server.xml, then change 8005 port to 8035 (or any other port not in use).
    
    
