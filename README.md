@@ -62,5 +62,10 @@
     java.net.BindException: Address already in use: JVM_Bind
 
     go to C:\**\apache-tomcat-7.0.94\conf\server.xml, then change 8005 port to 8035 (or any other port not in use).
-   
-   
+ 
+ ##4 Download and install MySQL
+ 
+    https://dev.mysql.com/downloads/installer/
+    ----
+    Logon my sql 
+    cmd->mysql -u root -p    
