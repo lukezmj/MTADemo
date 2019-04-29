@@ -5,6 +5,15 @@ public class TeamMember {
 	private String id;
 	private String name;
 	private String age;
+	private Lunch lunch;
+	
+	public TeamMember() {
+	}
+	
+	public TeamMember(Lunch lunch) {
+		this.lunch = lunch;
+	}
+	
 	public String getId() {
 		return id;
 	}
@@ -24,5 +33,15 @@ public class TeamMember {
 		this.age = age;
 	}
 	
+	public void init() {
+		System.out.println( "Name is: ");
+	}
 	
+	public void destroy() {
+		System.out.println(".");
+	}
+	
+	public String pickVender() {
+		return lunch.getVender();
+	}
 }
