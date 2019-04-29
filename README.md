@@ -1,10 +1,10 @@
-##1. Download and install Eclipse
+## 1. Download and install Eclipse
 
     Eclipse Java EE IDE for Web Developers.
     Version: Neon.3 Release (4.6.3)
     Build id: 20170314-1500
 
-##2.1 Download and install JDK
+## 2.1 Download and install JDK
 
     C:\**\jdk1.8.0_191
     ---
@@ -13,7 +13,7 @@
     Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
     Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
     
-##2.2 Modify environment variables  
+## 2.2 Modify environment variables  
 
     JAVA_HOME "C:\**\jdk1.8.0_191"
     Path "%JAVA_HOME%\bin"
@@ -21,7 +21,7 @@
     cmd->C:\**>echo %java_home%
     C:\**\jdk1.8.0_191
     
-##3.1 Download and install Maven
+## 3.1 Download and install Maven
     
     C:\**\apache-maven-3.6.0
     ---
@@ -32,7 +32,13 @@
     Default locale: en_US, platform encoding: Cp1252
     OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
     
-##3.2 Modify environment variables
+    mvn compile -generate target
+    mvn clean -delete target
+    mvn test -build and test 
+    mvn package -generate jar
+    mvn install - package and create local repository
+    
+## 3.2 Modify environment variables
 
     M2_HOME "C:\**\apache-maven-3.6.0"
     Path "M2_HOME"\bin"
@@ -40,12 +46,12 @@
     cmd->C:\**>echo %m2_home%
     C:\**\apache-maven-3.6.0
     
-##3.3 Download and install Tomcat
+## 3.3 Download and install Tomcat
 
     https://tomcat.apache.org/download-70.cgi
     C:\**\apache-tomcat-7.0.94
     
-##3.4 Modify environment variables
+## 3.4 Modify environment variables
     
     TOMCAT_HOME "C:\**\apache-tomcat-7.0.94"
     CATALINA_HOME %TOMCAT_HOME%
@@ -63,7 +69,7 @@
 
     go to C:\**\apache-tomcat-7.0.94\conf\server.xml, then change 8005 port to 8035 (or any other port not in use).
  
- ##4 Download and install MySQL
+ ## 4 Download and install MySQL
  
     https://dev.mysql.com/downloads/installer/
     ----
