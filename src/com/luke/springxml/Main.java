@@ -12,16 +12,9 @@ public class Main {
 		
 		AbstractApplicationContext context = 
 				new ClassPathXmlApplicationContext("Bean.xml");
-		context.registerShutdownHook();
 		
 		TeamMember member1 = (TeamMember) context.getBean("member1");
 		System.out.println(member1.getName());
-		
-		//scope: singleton
-		member1 = (TeamMember) context.getBean("member1");
-		System.out.println(member1.getName());
-		
-		//((DefaultListableBeanFactory) context.getBeanFactory()).destroySingleton("member1");
 		
 		TeamMember member2 = (TeamMember) context.getBean("member2");
 		member2.setName("Lizzy");
@@ -37,6 +30,12 @@ public class Main {
 		
 		//autowire
 		TeamMember member4 = (TeamMember) context.getBean("member4");
-		System.out.println(member4.getName()+" will have "+member4.pickVender()+" for lunch.");		
+		System.out.println(member4.getName()+" will have "+member4.pickVender()+" for lunch.");	
+		
+		//autowire byName
+		TeamMember member5 = (TeamMember) context.getBean("member5");
+		System.out.println(member5.pickVender());
+		
+		context.registerShutdownHook();
 	}
 }

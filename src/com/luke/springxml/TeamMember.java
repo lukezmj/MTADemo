@@ -38,10 +38,18 @@ public class TeamMember {
 	}
 	
 	public void destroy() {
-		System.out.println(".");
+		System.out.println("Bean is destroyed");
 	}
 	
 	public String pickVender() {
-		return lunch.getVender();
+		return getLunch().getVender();
+	}
+
+	public Lunch getLunch() {
+		return lunch;
+	}
+
+	public void setLunch(Lunch lunch) {
+		this.lunch = lunch;
 	}
 }
