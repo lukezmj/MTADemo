@@ -34,5 +34,7 @@ public class Main {
 		System.out.println(member5.pickVender());
 
 		context.registerShutdownHook();
+		
+		context.close();
 	}
 }
