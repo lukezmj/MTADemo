@@ -34,11 +34,11 @@ public class TeamMember {
 	}
 	
 	public void init() {
-		System.out.println( "Name is: ");
+		System.out.println( "Bean "+this.name+" initialized." );
 	}
 	
 	public void destroy() {
-		System.out.println("Bean is destroyed");
+		System.out.println("Bean "+this.name+" is destroyed.");
 	}
 	
 	public String pickVender() {
