@@ -15,6 +15,7 @@ public class Main {
 		TeamMember member1 = (TeamMember) context.getBean("member1");
 		System.out.println(member1.getName());
 		
+		//bean dependency injection
 		TeamMember member2 = (TeamMember) context.getBean("member2");
 		System.out.println(member2.getName()+" will have "+member2.pickVender()+" for lunch.");
 
