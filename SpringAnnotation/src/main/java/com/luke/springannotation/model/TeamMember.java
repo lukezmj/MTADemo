@@ -4,7 +4,7 @@ public class TeamMember {
 	
 	private String id;
 	private String name;
-	private String age;
+	private int age;
 	private Lunch lunch;
 	
 	public TeamMember() {
@@ -26,10 +26,10 @@ public class TeamMember {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	
