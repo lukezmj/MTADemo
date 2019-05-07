@@ -1,4 +1,4 @@
-package com.luke.springannotation.Controller;
+package com.luke.springannotation.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,7 @@ import com.luke.springannotation.model.Lunch;
 import com.luke.springannotation.model.TeamMember;
 
 @Configuration
-public class TeamMemberController {
+public class TeamMemberConfig{
 	@Bean(initMethod="init", destroyMethod="destroy")
 	@Scope("singleton")
 	public TeamMember member1() {
